@@ -17,6 +17,8 @@ MD033:                          # 指定したhtmlタグ以外の利用禁止
     - span
     - summary
     - TBD
+    - TOCInline
+MD034: false                    # htmlリンクに"<", ">"が付くのを防ぐ
 MD038: false                    # コードブロック内のスペース可
 MD040: false                    # コードブロックの言語指定強制を解除
 #MD046: false                    #

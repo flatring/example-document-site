@@ -1,0 +1,20 @@
+{
+  "search.exclude": {
+    "**/.github": true,
+    "**/.docusaurus": true,
+    "**/node_modules": true
+  },
+  // 拡張機能 ------------------------------------------------------------------
+  // draw.io
+  "hediet.vscode-drawio.theme": "min",
+
+  // Markdown All in One
+  "markdown.extension.list.indentationSize": "inherit",
+  "markdown.extension.orderedList.marker": "one",
+
+  // 言語識別子 ----------------------------------------------------------------
+  "[markdown,mdx]": {
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  }
+}
