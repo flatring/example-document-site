@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "davidanson.vscode-markdownlint",
+    "hediet.vscode-drawio",
+    "ics.japanese-proofreading",
+    "jebbs.plantuml",
+    "yzhang.markdown-all-in-one"
+  ]
+}

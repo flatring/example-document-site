@@ -50,6 +50,9 @@ const config = {
         docs: {
           // routeBasePath: '/',
           sidebarPath: './sidebars.js',
+          remarkPlugins: [
+            require('@akebifiky/remark-simple-plantuml')
+          ],
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
@@ -70,7 +73,24 @@ const config = {
             spec: 'openapi/openapi.yaml',
             route: '/api/redoc-example/',
           }
-        ]
+        ],
+        theme: {
+          primaryColor: '#1890ff',
+          /**
+           * @see https://github.com/redocly/redoc#redoc-options-object
+           */
+          options: {
+            hideHostname: true,
+            noAutoAuth: true,
+            sortPropsAlphabetically: true,
+            jsonSampleExpandLevel: 1,
+            scrollYOffset: 100,
+          },
+          /**
+           * @see https://github.com/redocly/redoc#redoc-theme-object
+           */
+          theme: {},
+        }
       }
     ],
   ],
@@ -88,7 +108,7 @@ const config = {
       navbar: {
         title: titleVal,
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Example document site.',
           src: 'img/icooon-mono-book8.svg',
           href: '/docs/introduction/',
         },
@@ -138,28 +158,6 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-          {
             title: 'Legal',
             items: [
               {
@@ -184,6 +182,18 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
+      {
+        hashed: true,
+        language: ['jp', 'en'],
+        highlightSearchTermsOnTargetPage: true,
+      },
+    ],
+  ],
 };
 
 export default config;
