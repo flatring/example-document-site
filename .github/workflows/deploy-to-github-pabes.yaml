@@ -13,17 +13,40 @@ jobs:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: "[1/7] Checkout"
+        uses: actions/checkout@v3
+
+      - name: "[2/7] Install Node.js"
+        uses: actions/setup-node@v3
         with:
           node-version: 20.x
-      - name: Build website
+
+      - name: "[3/7] Install pnpm"
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: "[4/7] Get pnpm store directory"
+        shell: bash
         run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: "[5/7] Setup pnpm cache"
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/website/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: "[6/7] Install & Build website"
+        run: |
+          cd website
           pnpm install --frozen-lickfile
           pnpm run build
 
       # docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
-      - name: Deploy to GitHub Pages
+      - name: "[7/7] Deploy to GitHub Pages"
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
