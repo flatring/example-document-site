@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ja" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-internal/rules/database" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.0.1">
+<title data-rh="true">データベース | 案件名(仮)</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://xxx/img/illustrain-book.png"><meta data-rh="true" name="twitter:image" content="https://xxx/img/illustrain-book.png"><meta data-rh="true" property="og:url" content="https://xxx/docs/internal/rules/database"><meta data-rh="true" property="og:locale" content="ja"><meta data-rh="true" name="docusaurus_locale" content="ja"><meta data-rh="true" name="docsearch:language" content="ja"><meta data-rh="true" name="og:title" content="案件名(仮)"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="データベース | 案件名(仮)"><meta data-rh="true" name="description" content="1. 編集中"><meta data-rh="true" property="og:description" content="1. 編集中"><link data-rh="true" rel="icon" href="/img/icooon-mono-book8.svg"><link data-rh="true" rel="canonical" href="https://xxx/docs/internal/rules/database"><link data-rh="true" rel="alternate" href="https://xxx/docs/internal/rules/database" hreflang="ja"><link data-rh="true" rel="alternate" href="https://xxx/docs/internal/rules/database" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.6c505708.css">
+<script src="/assets/js/runtime~main.549b1e97.js" defer="defer"></script>
+<script src="/assets/js/main.b1a315e4.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="メインコンテンツまでスキップ"><a class="skipToContent_SIq2" href="#__docusaurus_skipToContent_fallback">メインコンテンツまでスキップ</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/docs/introduction/"><div class="navbar__logo"><img src="/img/icooon-mono-book8.svg" alt="Example document site." class="themedComponent_Bje0 themedComponent--light_bcNb"><img src="/img/icooon-mono-book8.svg" alt="Example document site." class="themedComponent_Bje0 themedComponent--dark_foIG"></div><b class="navbar__title text--truncate">案件名(仮)</b></a><a class="navbar__item navbar__link" href="/docs/requirement-definition/">要件定義</a><a class="navbar__item navbar__link" href="/docs/external/">外部</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/internal/">内部</a><div class="navbar__item dropdown dropdown--hoverable"><a href="#" aria-haspopup="true" aria-expanded="false" role="button" class="navbar__link">API</a><ul class="dropdown__menu"><li><a class="dropdown__link" href="/api/redoc-example/">redoc example</a></li></ul></div></div><div class="navbar__items navbar__items--right"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_n_y4"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_f_DQ colorModeToggle_RoAm"><button class="clean-btn toggleButton_rcbJ toggleButtonDisabled_wGvp" type="button" disabled="" title="ダークモードを切り替える(現在はライトモード)" aria-label="ダークモードを切り替える(現在はライトモード)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_tAXo"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_QTzc"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_MtSi"><div class="navbar__search searchBarContainer_RoNU"><input placeholder="Search" aria-label="Search" class="navbar__search-input"><div class="loadingRing_h6EU searchBarLoadingRing_v4FI"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_DBxH"><div class="docsWrapper_Fr71"><button aria-label="先頭へ戻る" class="clean-btn theme-back-to-top-button backToTopButton_rtl4" type="button"></button><div class="docRoot_ExE1"><aside class="theme-doc-sidebar-container docSidebarContainer_I7lS"><div class="sidebarViewport_uGtg"><div class="sidebar_aiS2"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_P_fL"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/internal/">内部設計</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" aria-expanded="true" href="/docs/internal/rules/">規約・ルール</a><button aria-label="Collapse sidebar category &#x27;規約・ルール&#x27;" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/internal/rules/markdown">Markdown</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/internal/rules/database">データベース</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/docs/internal/batches/">バッチ</a><button aria-label="Expand sidebar category &#x27;バッチ&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/docs/internal/screens/">画面</a><button aria-label="Expand sidebar category &#x27;画面&#x27;" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" aria-expanded="false" href="/docs/internal/tables/">テーブル定義</a><button aria-label="Expand sidebar category &#x27;テーブル定義&#x27;" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav></div></div></aside><main class="docMainContainer_u5SM"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_iStE"><div class="docItemContainer_fkyW"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_CwHh" aria-label="パンくずリストのナビゲーション"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="ホームページ" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_ZGSJ"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/internal/rules/"><span itemprop="name">規約・ルール</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">データベース</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_je8z theme-doc-toc-mobile tocMobile_UARY"><button type="button" class="clean-btn tocCollapsibleButton_k4El">このページの見出し</button></div><div class="theme-doc-markdown markdown"><h1>データベース</h1>
+<div class="theme-admonition theme-admonition-tip admonition_yoFy alert alert--success"><div class="admonitionHeading_puP2"><span class="admonitionIcon_zD1D"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>ヒント</div><div class="admonitionContent_rlPE"><ol>
+<li>編集中</li>
+<li>どんなプロジェクトでも使えるレベルなものにしていきたい</li>
+</ol></div></div>
+<h2 class="anchor anchorWithStickyNavbar_EYWP" id="object-naming">オブジェクトの命名規約<a href="#object-naming" class="hash-link" aria-label="オブジェクトの命名規約 への直接リンク" title="オブジェクトの命名規約 への直接リンク">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_EYWP" id="general">全般<a href="#general" class="hash-link" aria-label="全般 への直接リンク" title="全般 への直接リンク">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_EYWP" id="プライマリーキー外部キー">プライマリーキー、外部キー<a href="#プライマリーキー外部キー" class="hash-link" aria-label="プライマリーキー、外部キー への直接リンク" title="プライマリーキー、外部キー への直接リンク">​</a></h4>
+<ol>
+<li>各テーブルのプライマリーキーは <code>id</code> とし、serial型とする</li>
+<li>リレーションする際はこの <code>id</code> を使う</li>
+<li>プライマリーキーに意味を持たせない</li>
+<li>外部キーとのリレーションはテーブル名 + <code>_id</code> とする<!-- -->
+<ol>
+<li>例<!-- -->
+<ol>
+<li>
+<p>親: <code>class</code></p>
+<table><thead><tr><th>論理名</th><th>物理名</th><th>型</th><th>コメント</th></tr></thead><tbody><tr><td>id</td><td><strong>id</strong></td><td>serial</td><td>auto increment</td></tr><tr><td>クラス名</td><td>name</td><td>varchar</td><td>-</td></tr></tbody></table>
+</li>
+<li>
+<p>子: <code>student</code></p>
+<table><thead><tr><th>論理名</th><th>物理名</th><th>型</th><th>コメント</th></tr></thead><tbody><tr><td>id</td><td>id</td><td>serial</td><td>auto increment</td></tr><tr><td>class_id</td><td><strong>class_id</strong></td><td>integer</td><td>外部キー</td></tr><tr><td>姓名</td><td>name</td><td>varchar</td><td>-</td></tr></tbody></table>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h4 class="anchor anchorWithStickyNavbar_EYWP" id="date">日付 / 日時<a href="#date" class="hash-link" aria-label="日付 / 日時 への直接リンク" title="日付 / 日時 への直接リンク">​</a></h4>
+<ol>
+<li>命名<!-- -->
+<ol>
+<li>年月日のみの場合は&quot;xx日&quot;、時刻まで必要な場合は&quot;xx日時&quot;とし、明確に使い分ける<!-- -->
+<ol>
+<li>日にちを表す項目は <code>受動態_on</code> となり、date型</li>
+<li>日時を表す項目は <code>受動態_at</code> となり、timestamp型</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>timestamp型はすべて <code>timestamp(6) without time zone</code> とする<!-- -->
+<ol>
+<li>タイムゾーンを持たせない(標準の <code>UST</code>)</li>
+</ol>
+</li>
+<li>例<!-- -->
+<ol>
+<li>
+<p>親: <code>classes</code></p>
+<table><thead><tr><th>論理名</th><th>物理名</th><th>型</th></tr></thead><tbody><tr><td>締切日</td><td>closed_on</td><td>date</td></tr><tr><td>締切日時</td><td>closed_at</td><td>timestamp</td></tr><tr><td>削除日</td><td>deleted_on</td><td>date</td></tr><tr><td>削除日時</td><td>deleted_at</td><td>timestamp</td></tr></tbody></table>
+</li>
+</ol>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_EYWP" id="大文字を使用しない">大文字を使用しない<a href="#大文字を使用しない" class="hash-link" aria-label="大文字を使用しない への直接リンク" title="大文字を使用しない への直接リンク">​</a></h3>
+<ol>
+<li>物理名は小文字とアンダーバー(&quot;_&quot;)のみを使用する</li>
+<li>テーブル名、カラム名ともに大文字を使用しない<!-- -->
+<ol>
+<li>データベースによっては大文字と小文字を違う文字とみなす場合、みなさない場合があるので小文字で統一する</li>
+</ol>
+</li>
+</ol>
+<table><thead><tr><th>OK/NG</th><th>名前</th></tr></thead><tbody><tr><td>⭕</td><td><strong>document</strong></td></tr><tr><td>❌</td><td>DOCUMENT</td></tr><tr><td>❌</td><td>Document</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_EYWP" id="単語の連結はスネークケース">単語の連結はスネークケース<a href="#単語の連結はスネークケース" class="hash-link" aria-label="単語の連結はスネークケース への直接リンク" title="単語の連結はスネークケース への直接リンク">​</a></h4>
+<ol>
+<li>テーブル名、カラム名ともにスネークケースを使用する</li>
+<li>大文字を使うキャメルケースやパスカルケースは使用禁止</li>
+</ol>
+<table><thead><tr><th>OK/NG</th><th>名前</th></tr></thead><tbody><tr><td>⭕</td><td><strong>table_name</strong></td></tr><tr><td>❌</td><td>tableName</td></tr><tr><td>❌</td><td>TableName</td></tr><tr><td>❌</td><td>tablename</td></tr><tr><td>❌</td><td>table-name</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_EYWP" id="英語表記">英語表記<a href="#英語表記" class="hash-link" aria-label="英語表記 への直接リンク" title="英語表記 への直接リンク">​</a></h3>
+<ol>
+<li>基本的に単語はローマ字ではなく、英語で書く</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_EYWP" id="略名を使用しない">略名を使用しない<a href="#略名を使用しない" class="hash-link" aria-label="略名を使用しない への直接リンク" title="略名を使用しない への直接リンク">​</a></h3>
+<ol>
+<li>短くして意味が分からくなるよりは長くて意味がわかる名前にする</li>
+<li>ただし、データベースの種類や環境によって文字数が制限される場合は除く</li>
+<li>以下は例外とする<!-- -->
+<ol>
+<li>&quot;数&quot;に関する項目は <code>_qty</code> (Quantityの略)を付ける</li>
+<li>例: <code>minus_points_qty</code></li>
+</ol>
+</li>
+</ol>
+<table><thead><tr><th>OK/NG</th><th>名前</th></tr></thead><tbody><tr><td>⭕</td><td><strong>start_date</strong></td></tr><tr><td>⭕</td><td><strong>maker_code</strong></td></tr><tr><td>❌</td><td>start_dt</td></tr><tr><td>❌</td><td>maker_cd</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_EYWP" id="テーブル編">テーブル編<a href="#テーブル編" class="hash-link" aria-label="テーブル編 への直接リンク" title="テーブル編 への直接リンク">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_EYWP" id="単数形で書く">単数形で書く<a href="#単数形で書く" class="hash-link" aria-label="単数形で書く への直接リンク" title="単数形で書く への直接リンク">​</a></h4>
+<table><thead><tr><th>OK/NG</th><th>名前</th></tr></thead><tbody><tr><td>⭕</td><td><strong>document</strong></td></tr><tr><td>❌</td><td>documents</td></tr><tr><td>⭕</td><td><strong>category</strong></td></tr><tr><td>❌</td><td>categories</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_EYWP" id="n用テーブル">n<!-- -->:n<!-- -->用テーブル<a href="#n用テーブル" class="hash-link" aria-label="n用テーブル への直接リンク" title="n用テーブル への直接リンク">​</a></h4>
+<ol>
+<li>接頭語に<code>map_</code>を付ける</li>
+</ol>
+<table><thead><tr><th>OK/NG</th><th>名前</th></tr></thead><tbody><tr><td>⭕</td><td><strong>map_user_category</strong></td></tr><tr><td>❌</td><td>user_category</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_EYWP" id="カラム編">カラム編<a href="#カラム編" class="hash-link" aria-label="カラム編 への直接リンク" title="カラム編 への直接リンク">​</a></h3>
+<ol>
+<li>ステータスを保存する項目は状態を含めて書く</li>
+</ol>
+<table><thead><tr><th>OK/NG</th><th>名前</th></tr></thead><tbody><tr><td>⭕</td><td><strong>is_working</strong></td></tr><tr><td>⭕</td><td><strong>is_deleted</strong></td></tr><tr><td>❌</td><td>delete_flag</td></tr></tbody></table>
+<h4 class="anchor anchorWithStickyNavbar_EYWP" id="flgkbnなどの略名を使用しない">flg、kbnなどの略名を使用しない<a href="#flgkbnなどの略名を使用しない" class="hash-link" aria-label="flg、kbnなどの略  名を使用しない への直接リンク" title="flg、kbnなどの略名を使用しない への直接リンク">​</a></h4>
+<ol>
+<li>例えば&quot;flag&quot;と付いたboolean型にした場合、trueとfalseが見ただけでどちらがonなのかが分からないため</li>
+</ol>
+<table><thead><tr><th>OK/NG</th><th>名前</th></tr></thead><tbody><tr><td>⭕</td><td><strong>is_deleted</strong></td></tr><tr><td>❌</td><td>delete_flg</td></tr><tr><td>❌</td><td>delete_flag</td></tr></tbody></table>
+<h3 class="anchor anchorWithStickyNavbar_EYWP" id="制約編">制約編<a href="#制約編" class="hash-link" aria-label="制約編 への直接リンク" title="制約編 への直接リンク">​</a></h3>
+<ol>
+<li>ユニーク制約は「テーブル名_uq_nn」とする</li>
+<li><code>_uq</code> は固定文字。 <code>nn</code>はゼロ埋めの連番</li>
+<li>例: <code>user_uq_01</code></li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_EYWP" id="インデックス編">インデックス編<a href="#インデックス編" class="hash-link" aria-label="インデックス編 への直接リンク" title="インデックス編 への直接リンク">​</a></h3>
+<ol>
+<li>インデックスは「テーブル名_idx_nn」とする</li>
+<li><code>_idx</code> は固定文字。 <code>nn</code>はゼロ埋めの連番</li>
+<li>例: <code>user_idx_01</code></li>
+</ol></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-tags-row row margin-bottom--sm"><div class="col"><b>タグ:</b><ul class="tags_IJS8 padding--none margin-left--sm"><li class="tag_xQpE"><a class="tag_jdBa tagRegular_AHZS" href="/docs/tags/database">Database</a></li></ul></div></div><div class="theme-doc-footer-edit-meta-row row"><div class="col"></div><div class="col lastUpdated_aspI"><span class="theme-last-updated"><b><time datetime="2024-01-05T03:51:26.000Z">2024年1月5日</time></b>に<b>hoh</b>が<!-- -->最終更新</span></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="ドキュメントページ"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/internal/rules/markdown"><div class="pagination-nav__sublabel">前へ</div><div class="pagination-nav__label">Markdown</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/internal/batches/"><div class="pagination-nav__sublabel">次へ</div><div class="pagination-nav__label">バッチ一覧</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents__a1f thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#object-naming" class="table-of-contents__link toc-highlight">オブジェクトの命名規約</a><ul><li><a href="#general" class="table-of-contents__link toc-highlight">全般</a></li><li><a href="#大文字を使用しない" class="table-of-contents__link toc-highlight">大文字を使用しない</a></li><li><a href="#英語表記" class="table-of-contents__link toc-highlight">英語表記</a></li><li><a href="#略名を使用しない" class="table-of-contents__link toc-highlight">略名を使用しない</a></li><li><a href="#テーブル編" class="table-of-contents__link toc-highlight">テーブル編</a></li><li><a href="#カラム編" class="table-of-contents__link toc-highlight">カラム編</a></li><li><a href="#制約編" class="table-of-contents__link toc-highlight">制約編</a></li><li><a href="#インデックス編" class="table-of-contents__link toc-highlight">インデックス編</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Legal</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Privacy<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_n_y4"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Terms<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_n_y4"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Cookie Policy<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_n_y4"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2024 案件名(仮). Built with Docusaurus.</div></div></div></footer></div>
+</body>
+</html>
