@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 // const titleVal = 'Example of documentation site';
 const titleVal = '案件名(仮)';
 const descriptionVal = 'Example of documentation site.';
-const urlVal = process.env.NODE_ENV !== 'development' ? 'https://xxx' : 'http://localhost:3000';
+const urlVal = process.env.NODE_ENV !== 'development' ? 'https://flatring.github.io/example-document-site/' : 'http://localhost:3000';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -48,7 +48,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          // routeBasePath: '/',
+          // routeBasePath: '/docs',
           sidebarPath: './sidebars.js',
           remarkPlugins: [
             require('@akebifiky/remark-simple-plantuml')
