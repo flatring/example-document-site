@@ -41,7 +41,7 @@ jobs:
 
       - name: "[6/7] Install & Build website"
         run: |
-          pnpm website install --frozen-lockfile
+          pnpm install --frozen-lockfile
           pnpm website build
 
       # docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
