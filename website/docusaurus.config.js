@@ -86,10 +86,6 @@ const config = {
             jsonSampleExpandLevel: 1,
             scrollYOffset: 100,
           },
-          /**
-           * @see https://github.com/redocly/redoc#redoc-theme-object
-           */
-          theme: {},
         }
       }
     ],
