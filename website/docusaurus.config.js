@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 // const titleVal = 'Example of documentation site';
 const titleVal = '案件名(仮)';
 const descriptionVal = 'Example of documentation site.';
-const urlVal = process.env.NODE_ENV !== 'development' ? 'https://flatring.github.io/example-document-site/' : 'http://localhost:3000';
+const urlVal = process.env.NODE_ENV !== 'development' ? 'https://flatring.github.io/' : 'http://localhost:3000';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
