@@ -20,7 +20,7 @@ const config = {
   favicon: 'img/icooon-mono-book8.svg',
 
   url: urlVal,
-  baseUrl: '/',
+  baseUrl: '/example-document-site/',
 
   organizationName: 'flatring',
   projectName: 'example-document-site',
