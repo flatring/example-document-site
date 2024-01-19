@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 // const titleVal = 'Example of documentation site';
 const titleVal = '案件名(仮)';
 const descriptionVal = 'Example of documentation site.';
-const urlVal = process.env.NODE_ENV !== 'development' ? 'https://xxx' : 'http://localhost:3000';
+const urlVal = process.env.NODE_ENV !== 'development' ? 'https://flatring.github.io/' : 'http://localhost:3000';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -48,7 +48,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          // routeBasePath: '/',
+          // routeBasePath: '/docs',
           sidebarPath: './sidebars.js',
           remarkPlugins: [
             require('@akebifiky/remark-simple-plantuml')
@@ -62,37 +62,30 @@ const config = {
         },
       }),
     ],
-    [
-      'redocusaurus',
-      {
-        debug: Boolean(process.env.DEBUG || process.env.CI),
-        config: path.join(__dirname, 'redocly.yaml'),
-        specs: [
-          {
-            id: 'using-multi-file-yaml',
-            spec: 'openapi/openapi.yaml',
-            route: '/api/redoc-example/',
-          }
-        ],
-        theme: {
-          primaryColor: '#1890ff',
-          /**
-           * @see https://github.com/redocly/redoc#redoc-options-object
-           */
-          options: {
-            hideHostname: true,
-            noAutoAuth: true,
-            sortPropsAlphabetically: true,
-            jsonSampleExpandLevel: 1,
-            scrollYOffset: 100,
-          },
-          /**
-           * @see https://github.com/redocly/redoc#redoc-theme-object
-           */
-          theme: {},
-        }
-      }
-    ],
+    // [
+    //   'redocusaurus',
+    //   {
+    //     debug: Boolean(process.env.DEBUG || process.env.CI),
+    //     config: path.join(__dirname, 'redocly.yaml'),
+    //     specs: [
+    //       {
+    //         id: 'using-multi-file-yaml',
+    //         spec: 'openapi/openapi.yaml',
+    //         route: '/api/redoc-example/',
+    //       }
+    //     ],
+    //     theme: {
+    //       primaryColor: '#1890ff',
+    //       options: {
+    //         hideHostname: true,
+    //         noAutoAuth: true,
+    //         sortPropsAlphabetically: true,
+    //         jsonSampleExpandLevel: 1,
+    //         scrollYOffset: 100,
+    //       },
+    //     }
+    //   }
+    // ],
   ],
 
   themeConfig:
@@ -137,16 +130,16 @@ const config = {
             position: 'left',
             docId: 'internal/index',
           },
-          {
-            label: 'API',
-            position: 'left',
-            items: [
-              {
-                label: 'redoc example',
-                to: '/api/redoc-example/',
-              },
-            ]
-          },
+          // {
+          //   label: 'API',
+          //   position: 'left',
+          //   items: [
+          //     {
+          //       label: 'redoc example',
+          //       to: '/api/redoc-example/',
+          //     },
+          //   ]
+          // },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
