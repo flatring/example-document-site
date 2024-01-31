@@ -1,14 +1,15 @@
-/*
-  example.
-  ---
-  import TBD from '@site/src/components/TBD';
-  <TBD/>
+/**
+ * Module TBD Label.
+ * @module TBD
+ * @example
+ * import TBD from '@site/src/components/TBD';
+ * <TBD/>
  */
 import React from 'react';
 import Highlight from '../Highlight/index';
 
 /**
- * TBD tag.
+ * TBD Label.
  * @returns {JSX.Element}
  */
 function TBD() {
