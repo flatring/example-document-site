@@ -4,6 +4,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "frontend": "pnpm -F \"frontend\"",
     "website": "pnpm -F \"website\""
   },
   "keywords": [],
