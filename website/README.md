@@ -11,7 +11,8 @@ pnpm install
 pnpm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+ドキュメントサイトをプレビュー表示します。
+コンテンツなどの変更は再起動しなくても自動的に更新されます。
 
 ### Build
 
@@ -19,4 +20,5 @@ This command starts a local development server and opens up a browser window. Mo
 pnpm build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+静的コンテンツを作成します。
+ホスティングする前にこのコマンドを実行してエラーがないことを確認しましょう。

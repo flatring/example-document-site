@@ -3,9 +3,9 @@
 Example of documentation site.
 
 1. Deployed pages.
-    1. ~~`https://flatring.github.io/example-document-site/`~~
+    1. `https://flatring.github.io/example-document-site/`
 1. Deployed image.
-    1. ![image](docs/development/images/screenshot_home.png)
+    1. ![image](/website/static/img/screenshot_website.png)
 
 ## License
 
