@@ -62,30 +62,30 @@ const config = {
         },
       }),
     ],
-    // [
-    //   'redocusaurus',
-    //   {
-    //     debug: Boolean(process.env.DEBUG || process.env.CI),
-    //     config: path.join(__dirname, 'redocly.yaml'),
-    //     specs: [
-    //       {
-    //         id: 'using-multi-file-yaml',
-    //         spec: 'openapi/openapi.yaml',
-    //         route: '/api/redoc-example/',
-    //       }
-    //     ],
-    //     theme: {
-    //       primaryColor: '#1890ff',
-    //       options: {
-    //         hideHostname: true,
-    //         noAutoAuth: true,
-    //         sortPropsAlphabetically: true,
-    //         jsonSampleExpandLevel: 1,
-    //         scrollYOffset: 100,
-    //       },
-    //     }
-    //   }
-    // ],
+    [
+      'redocusaurus',
+      {
+        debug: Boolean(process.env.DEBUG || process.env.CI),
+        config: path.join(__dirname, 'redocly.yaml'),
+        specs: [
+          {
+            id: 'using-multi-file-yaml',
+            spec: 'openapi/openapi.yaml',
+            route: '/api/redoc-example/',
+          }
+        ],
+        theme: {
+          primaryColor: '#1890ff',
+          options: {
+            hideHostname: true,
+            noAutoAuth: true,
+            sortPropsAlphabetically: true,
+            jsonSampleExpandLevel: 1,
+            scrollYOffset: 100,
+          },
+        }
+      }
+    ],
   ],
 
   themeConfig:
@@ -130,18 +130,18 @@ const config = {
             position: 'left',
             docId: 'internal/index',
           },
-          // {
-          //   label: 'API',
-          //   position: 'left',
-          //   items: [
-          //     {
-          //       label: 'redoc example',
-          //       to: '/api/redoc-example/',
-          //     },
-          //   ]
-          // },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            label: 'API',
+            position: 'left',
+            items: [
+              {
+                label: 'redoc example',
+                to: '/api/redoc-example/',
+              },
+            ]
+          },
+          {
+            href: 'https://flatring.github.io/example-document-site/',
             label: 'GitHub',
             position: 'right',
           },
