@@ -141,7 +141,7 @@ const config = {
             ]
           },
           {
-            href: 'https://flatring.github.io/example-document-site/',
+            href: 'https://github.com/flatring/example-document-site',
             label: 'GitHub',
             position: 'right',
           },
