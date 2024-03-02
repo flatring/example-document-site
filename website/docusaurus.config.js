@@ -93,11 +93,16 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/illustrain-book.png',
-      hideableSidbar: true,
       metadata: [
         { name: 'description', content: descriptionVal },
         { name: 'og:title', content: titleVal }
       ],
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        }
+      },
       navbar: {
         title: titleVal,
         logo: {
