@@ -10,5 +10,17 @@ sidebar_position: 4
 :::
 
 ```html
-<iframe width="900px" height="540px" src="https://example.sharepoint.com/sites/xxx/_layouts/1/Doc.aspx?sourcedoc={123456}&emp;action=embedview" frameborder="0">これは、<a target="_blank" href="https://office.com/webapps">Office</a> の機能を利用した、<a target="_blank" href="https://office.com">Microsoft Office</a> の埋め込み型のプレゼンテーションです。</iframe>
+<iframe width="100%" height="600px" src="https://example.sharepoint.com/sites/xxx/_layouts/1/Doc.aspx?sourcedoc={123456}&emp;action=embedview" frameborder="0">これは、<a target="_blank" href="https://office.com/webapps">Office</a> の機能を利用した、<a target="_blank" href="https://office.com">Microsoft Office</a> の埋め込み型のプレゼンテーションです。</iframe>
 ```
+
+## 手順
+1. SharePointで対象のファイル(ExcelやPowerPointなど)をWebブラウザーで開く
+1. メニューの「ファイル」> 「共有」 > 「埋め込み」をクリックする
+1. 外観や操作で表示させたい内容を調整する
+1. 埋め込みコードをコピーし、上記のようにMarkdownに貼り付ける
+
+:::tip
+1. 貼付け後、`width="100%"` にし、heightでサイズ調整するとレイアウト調整しやすいのでオススメ
+1. iframeでは編集不可にしておくと、誤編集のリスクが減るのでオススメ
+    1. チェックボックス「他のユーザーにセルの入力を許可する...」をオフ(デフォルト)のままにする
+:::

@@ -28,3 +28,50 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Chapter number */
+main {
+  div.container {
+    article {
+      h1 {
+        counter-reset: ch-lv1;
+      }
+      h2 {
+        counter-reset: ch-lv2;
+      }
+      h3 {
+        counter-reset: ch-lv3;
+      }
+      h4 {
+        counter-reset: ch-lv4;
+      }
+
+      h2::before {
+        counter-increment: ch-lv1;
+        content: counter(ch-lv1) '. ';
+      }
+      h3::before {
+        counter-increment: ch-lv2;
+        content: counter(ch-lv1) '.' counter(ch-lv2) '. ';
+      }
+      h4::before {
+        counter-increment: ch-lv3;
+        content: counter(ch-lv1) '.' counter(ch-lv2) '.' counter(ch-lv3) '. ';
+      }
+      h5::before {
+        counter-increment: ch-lv4;
+        content: counter(ch-lv1) '.' counter(ch-lv2) '.' counter(ch-lv3) '.' counter(ch-lv4) '. ';
+      }
+    }
+    div [class^=tableOfContents_] {
+      ul {
+        counter-reset: toc-lv;
+        list-style: none;
+      }
+      ul li a::before {
+        counter-increment: toc-lv;
+        content: counters(toc-lv, '.') '. ';
+      }
+    }
+  }
+}
