@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "[1/7] Checkout"
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: "[2/7] Install Node.js"
         uses: actions/setup-node@v3
@@ -22,9 +22,9 @@ jobs:
           node-version: 20.x
 
       - name: "[3/7] Install pnpm"
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
-          version: 8
+          version: 9
 
       - name: "[4/7] Get pnpm store directory"
         shell: bash
@@ -32,7 +32,7 @@ jobs:
           echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
       - name: "[5/7] Setup pnpm cache"
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: ${{ env.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/website/pnpm-lock.yaml') }}
@@ -46,7 +46,7 @@ jobs:
 
       # docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
       - name: "[7/7] Deploy to GitHub Pages"
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./website/build

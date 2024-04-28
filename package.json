@@ -1,6 +1,6 @@
 {
   "name": "root",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "packageManager": "pnpm@8.14.0",
+  "packageManager": "pnpm@9.0.6",
   "engines": {
-    "pnpm": ">=8.14.0"
+    "pnpm": ">=9.0.6"
   }
 }
