@@ -2,32 +2,28 @@
 sidebar_position: 3
 ---
 # 業務フロー
-
-## サービス契約 {#service-contract}
+## 本の貸出 {#flow1}
 
 ```plantuml
 @startuml
-' !define uml https://raw.githubusercontent.com/flatring/plantuml-stencils/main
-' !include uml/colorset/ocean-blue.iuml
-' !include uml/colorset/_skinparams.iuml
+!define uml https://raw.githubusercontent.com/flatring/plantuml-stencils/main
+!include uml/colorset/ocean-blue.iuml
+!include uml/colorset/_skinparams.iuml
 
-|#pink|Actor_For_red|
+|#lightblue|利用者|
 start
-if (color?) is (red) then
-  #pink:**action red**;
-  :foo1;
-else (not red)
-  |#lightgray|Actor_For_no_red|
-  #lightgray:**action not red**;
-  :foo2;
+#lightblue:本を探す;
+if (本が見つかった?) is (true) then
+else (false)
+  #lightblue:本を見つけてもらう;
+  |#lightgray|図書委員|
+  #lightgray:本を探す;
 endif
-|Next_Actor|
-#lightblue:foo3;
-:foo4;
-|Final_Actor|
-#palegreen:foo5;
+#lightgray:ステータスを貸出中にする;
+#lightgray:盗難防止タグをオフにする;
+#lightgray:本を渡す;
+|利用者|
+#lightblue:本を受け取る;
 stop
 @enduml
 ```
-<!-- ![](./img/example-flow.svg) -->
-<!-- ![](./img/example-flow.png) -->
