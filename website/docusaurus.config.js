@@ -118,6 +118,12 @@ const config = {
           //   docId: 'introduction/index',
           // },
           {
+            label: '業務分析',
+            type: 'doc',
+            position: 'left',
+            docId: 'business-analysis/index',
+          },
+          {
             label: '要件定義',
             type: 'doc',
             position: 'left',
