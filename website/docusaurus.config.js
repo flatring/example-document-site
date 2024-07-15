@@ -71,7 +71,7 @@ const config = {
           {
             id: 'using-multi-file-yaml',
             spec: 'openapi/openapi.yaml',
-            route: '/api/redoc-example/',
+            route: '/api/',
           }
         ],
         theme: {
@@ -108,15 +108,9 @@ const config = {
         logo: {
           alt: 'Example document site.',
           src: 'img/icooon-mono-book8.svg',
-          href: '/docs/introduction/',
+          href: '/',
         },
         items: [
-          // {
-          //   label: 'Introduction',
-          //   type: 'doc',
-          //   position: 'left',
-          //   docId: 'introduction/index',
-          // },
           {
             label: '業務分析',
             type: 'doc',
@@ -144,12 +138,13 @@ const config = {
           {
             label: 'API',
             position: 'left',
-            items: [
-              {
-                label: 'redoc example',
-                to: '/api/redoc-example/',
-              },
-            ]
+            to: '/api/',
+            // items: [
+            //   {
+            //     label: 'redoc example',
+            //     to: '/api/redoc-example/',
+            //   },
+            // ]
           },
           {
             href: 'https://github.com/flatring/example-document-site',
