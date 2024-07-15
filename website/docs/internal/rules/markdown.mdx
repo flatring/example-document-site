@@ -109,7 +109,7 @@ tags:
     1. ハイライトとtitleを続けて書く場合は区切りとして半角スペースが必要
 1. 例
     ```md
-        ```nim {4-6,8} title="sample.nim"
+        ```nim {4-6,8} title="sample.nim" showLineNumbers
         import tables, strutils
 
         var wordFrequencies = initCountTable[string]()
@@ -121,7 +121,7 @@ tags:
     ```
 
 1. 例のレンダリング結果
-    ```nim {4-6,8} title="sample.nim"
+    ```nim {4-6,8} title="sample.nim" showLineNumbers
     import tables, strutils
 
     var wordFrequencies = initCountTable[string]()
@@ -131,3 +131,18 @@ tags:
 
     echo "The most frequent word is '", wordFrequencies.largest, "'"
     ```
+
+## docusaurus用 {#for-docusaurus}
+### 強調記号 {#emphasis-added}
+1. アンダーバー(`_`)やアスタリスクなどを使う時、強調表示されてしまうので円マークorバックスラッシュ8(`\`)を使って回避する
+    1. `_Italic_` {'>'} _Italic_
+    1. `\_Italic\_` {'>'} \_Italic\_
+
+### 不等号 {#inequality-sign}
+1. `<`、`>` を使うとhtmlタグ扱いでエラーとなる場合があるので以下の方法を使って回避する
+    1. 全角不等号を使う
+        1. :x:: `<強調したい文言>`
+        1. :o:: `＜強調したい文言＞`
+    1. `{'`、`'}` で括る
+        1. :x:: `abc <= 100`
+        1. :o:: `abc {'<='} 100`
